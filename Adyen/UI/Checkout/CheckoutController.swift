@@ -54,6 +54,10 @@ public final class CheckoutController {
         token.integrationType = .quick
         paymentController?.start(with: token)
         
+        //presenter.showLoadingScreen()
+    }
+    
+    public func showLoadingScreen() {
         presenter.showLoadingScreen()
     }
     
