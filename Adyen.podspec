@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Adyen'
-  s.version = '2.8.4'
+  s.version = '2.8.4.modify'
   s.summary = "Adyen SDK for iOS"
   s.description = <<-DESC
     With Adyen SDK you can dynamically list all relevant payment methods for a specific transaction, so your shoppers can always pay with the method of their choice. The methods are listed based on the shopper's country, the transaction currency and amount.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://adyen.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Adyen' => 'support@adyen.com' }
-  s.source = { :git => 'https://github.com/Adyen/adyen-ios.git', :tag => "#{s.version}" }
+  s.source = { :git => 'https://github.com/charlesluo2014/adyen-ios.git', :tag => "#{s.version}" }
   s.platform = :ios
   s.ios.deployment_target = '10.3'
   s.swift_version = '5.0'

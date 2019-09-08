@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AdyenInternal'
-  s.version = '2.8.4'
+  s.version = '2.8.4.modify'
   s.summary = "Adyen Internal SDK"
   s.description = <<-DESC
     Support methods for Adyen SDK
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://adyen.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Adyen' => 'support@adyen.com' }
-  s.source = { :git => 'https://github.com/Adyen/adyen-ios.git', :tag => "#{s.version}" }
+  s.source = { :git => 'https://github.com/charlesluo2014/adyen-ios.git', :tag => "#{s.version}" }
   s.platform = :ios
   s.ios.deployment_target = '10.3'
   s.swift_version = '5.0'
