@@ -127,6 +127,24 @@ public final class PaymentController {
         }
         return self.paymentSession!
     }
+    public func decodePaymentMethods(paymentSessionResponse: String) -> SectionedPaymentMethods{
+        do {
+            var paymentSession = try PaymentSession.decode(from: paymentSessionResponse)
+            
+            let pluginManager = PluginManager(paymentSession: paymentSession)
+            self.pluginManager = pluginManager
+            
+            let availablePaymentMethods = pluginManager.availablePaymentMethods(for: paymentSession.paymentMethods)
+            paymentSession.paymentMethods = availablePaymentMethods
+            self.paymentSession = paymentSession
+            return availablePaymentMethods
+        } catch {
+            finish(with: error)
+        }
+        return self.paymentSession!.paymentMethods
+    }
+    
+    
     
     private func requestPaymentMethodSelection() {
         guard let paymentSession = paymentSession else {

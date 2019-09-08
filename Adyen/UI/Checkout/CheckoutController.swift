@@ -112,6 +112,9 @@ public final class CheckoutController {
     public func decodePaymentSession(_ encodedToken:String)->PaymentSession{
         return (paymentController?.decodePaymentSession(paymentSessionResponse: encodedToken))!
     }
+    public func decodePaymentMethods(_ encodedToken:String)->SectionedPaymentMethods{
+        return (paymentController?.decodePaymentMethods(paymentSessionResponse: encodedToken))!
+    }
     
     private func reset() {
         paymentController = nil
