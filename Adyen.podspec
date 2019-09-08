@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://adyen.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Adyen' => 'support@adyen.com' }
-  s.source = { :git => 'https://github.com/charlesluo2014/adyen-ios.git', :tag => "#{s.version}" }
+  s.source = { :git => 'https://github.com/charlesluo2014/adyen-ios.git', :branch => "#{s.version}" }
   s.platform = :ios
   s.ios.deployment_target = '10.3'
   s.swift_version = '5.0'
