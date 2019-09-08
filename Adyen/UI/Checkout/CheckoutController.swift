@@ -109,9 +109,8 @@ public final class CheckoutController {
     public func selectPaymentMethod(_ paymentMethod: PaymentMethod){
         select(paymentMethod)
     }
-    
-    public func getFirstPreferedPaymentMethod() -> PaymentMethod{
-        return self.paymentMethods!.preferred[0];
+    public func decodePaymentSession(_ encodedToken:String)->PaymentSession{
+        return (paymentController?.decodePaymentSession(paymentSessionResponse: encodedToken))!
     }
     
     private func reset() {
