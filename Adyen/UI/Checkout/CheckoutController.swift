@@ -46,6 +46,8 @@ public final class CheckoutController {
     /// Determines whether the preselected payment method should be shown when available. Default value is `true`.
     public var showsPreselectedPaymentMethod = true
     
+    public var paymentMethods:SectionedPaymentMethods?
+    
     /// Starts the checkout process and presents the checkout UI on the provided presentingViewController.
     public func start() {
         paymentController = PaymentController(delegate: self)
@@ -104,6 +106,13 @@ public final class CheckoutController {
             selectionHandler(paymentMethod)
         }
     }
+    public func selectPaymentMethod(_ paymentMethod: PaymentMethod){
+        select(paymentMethod)
+    }
+    
+    public func getFirstPreferedPaymentMethod() -> PaymentMethod{
+        return self.paymentMethods!.preferred[0];
+    }
     
     private func reset() {
         paymentController = nil
@@ -152,7 +161,7 @@ extension CheckoutController: PaymentControllerDelegate {
             
             return
         }
-        
+        self.paymentMethods=paymentMethods
         presenter.show(paymentMethods, pluginManager: pluginManager)
     }
     
