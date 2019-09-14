@@ -4,7 +4,7 @@
 "paymentMethods.title" = "Betalingsmåder";
 "paymentMethods.otherMethods" = "Vælg anden måde";
 "payButton" = "Betal";
-"payButton.formatted" = "Betal %@";
+"payButton.formatted" = "Bekræfte";
 "cancelButton" = "Annuller";
 "dismissButton" = "OK";
 "creditCard.stored.accessibilityLabel" = "%1$@ og ender med %2$@";

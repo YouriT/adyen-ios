@@ -33,7 +33,7 @@ class CardFormViewController: FormViewController {
         let encryptedCard = CardEncryptor.encryptedCard(for: card, publicKey: publicKey, generationDate: generationDate)
         let installments = installmentItems?.filter({ $0.name == installmentsField.selectedValue }).first?.identifier
         
-        let cardData = CardInputData(encryptedCard: encryptedCard, holderName: holderNameField.text, storeDetails: storeDetailsView.isSelected, installments: installments)
+        let cardData = CardInputData(encryptedCard: encryptedCard, holderName: holderNameField.text, storeDetails: false, installments: installments)
         
         cardDetailsHandler?(cardData)
     }
@@ -63,7 +63,7 @@ class CardFormViewController: FormViewController {
         }
         
         if storeDetailsConfiguration != .none {
-            formView.addFormElement(storeDetailsView)
+//            formView.addFormElement(storeDetailsView)
         }
         
         formView.payButton.addTarget(self, action: #selector(pay), for: .touchUpInside)
@@ -199,7 +199,7 @@ class CardFormViewController: FormViewController {
     private lazy var storeDetailsView: FormConsentView = {
         let view = FormConsentView()
         view.title = ADYLocalizedString("creditCard.storeDetailsButton")
-        view.isSelected = false
+        view.isSelected = true
         view.accessibilityIdentifier = "store-details-button"
         return view
     }()

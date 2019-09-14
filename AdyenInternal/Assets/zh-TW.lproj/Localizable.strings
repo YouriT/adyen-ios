@@ -4,7 +4,7 @@
 "paymentMethods.title" = "付款方式";
 "paymentMethods.otherMethods" = "選取其他方式";
 "payButton" = "支付";
-"payButton.formatted" = "支付 %@";
+"payButton.formatted" = "确认";
 "cancelButton" = "取消";
 "dismissButton" = "確定";
 "creditCard.stored.accessibilityLabel" = "結尾是 %2$@ 的 %1$@";

@@ -4,7 +4,7 @@
 "paymentMethods.title" = "Payment Methods";
 "paymentMethods.otherMethods" = "Select other method";
 "payButton" = "Pay";
-"payButton.formatted" = "Pay %@";
+"payButton.formatted" = "Confirm";
 "cancelButton" = "Cancel";
 "dismissButton" = "OK";
 "creditCard.stored.accessibilityLabel" = "%1$@ ending in %2$@";

@@ -4,7 +4,7 @@
 "paymentMethods.title" = "お支払い方法";
 "paymentMethods.otherMethods" = "その他のお支払いオプション";
 "payButton" = "支払う";
-"payButton.formatted" = "%@のお支払い";
+"payButton.formatted" = "確認する";
 "cancelButton" = "キャンセル";
 "dismissButton" = "OK";
 "creditCard.stored.accessibilityLabel" = "下四桁が%2$@で終わる";
