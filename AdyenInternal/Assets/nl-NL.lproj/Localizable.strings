@@ -4,7 +4,7 @@
 "paymentMethods.title" = "Betaalmethodes";
 "paymentMethods.otherMethods" = "Alle betaalmethodes";
 "payButton" = "Betaal";
-"payButton.formatted" = "%@ betalen";
+"payButton.formatted" = "Bevestigen";
 "cancelButton" = "Annuleer";
 "dismissButton" = "Oké";
 "creditCard.stored.accessibilityLabel" = "%1$@ eindigend in %2$@";

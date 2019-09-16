@@ -4,7 +4,7 @@
 "paymentMethods.title" = "Способы оплаты";
 "paymentMethods.otherMethods" = "Выбрать другой способ";
 "payButton" = "Заплатить";
-"payButton.formatted" = "Заплатить %@";
+"payButton.formatted" = "подтвердить";
 "cancelButton" = "Отменить";
 "dismissButton" = "ОК";
 "creditCard.stored.accessibilityLabel" = "%1$@ с %2$@ на конце";

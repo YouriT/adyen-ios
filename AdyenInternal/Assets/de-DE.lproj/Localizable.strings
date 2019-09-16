@@ -4,7 +4,7 @@
 "paymentMethods.title" = "Zahlungsmethoden";
 "paymentMethods.otherMethods" = "Andere Zahlungsmethoden";
 "payButton" = "Zahlen";
-"payButton.formatted" = "%@ zahlen";
+"payButton.formatted" = "Bestätigen";
 "cancelButton" = "Abbrechen";
 "dismissButton" = "OK";
 "creditCard.stored.accessibilityLabel" = "%1$@, endet auf %2$@";
