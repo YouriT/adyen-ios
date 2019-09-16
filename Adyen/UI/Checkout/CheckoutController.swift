@@ -161,6 +161,22 @@ extension CheckoutController: PaymentControllerDelegate {
             return
         }
         
+        if paymentMethods.other.count>1 {
+            for  paymentMethod in paymentMethods.other {
+                if(paymentMethod.name=="Credit Card"){
+                    let plugin = pluginManager.plugin(for: paymentMethod) as? PaymentDetailsPlugin
+                    
+                    if let plugin = plugin, plugin.canSkipPaymentMethodSelection {
+                        select(paymentMethod, asRoot: true)
+                    } else {
+                        let amount = paymentSession.payment.amount(for: paymentMethod)
+                        presenter.show(paymentMethod, amount: amount, shouldShowChangeButton: false)
+                    }
+                    return
+                }
+            }
+        }
+        
         // If there's only one payment method available, gather details directly or show a confirmation screen.
         if paymentMethods.other.count == 1 {
             let paymentMethod = paymentMethods.other[0]
